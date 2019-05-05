@@ -1,6 +1,6 @@
 # Plugin template
 
-This repo is used as a template for swup plugins. Steps to the publish your own swup plugin:
+This repo is used as a template for swup plugins. Steps to publish your own swup plugin:
 
 1. Make a copy of this repo.
 2. Update the name in _package.json_. Please, follow format `swup-[plugin name]-plugin`.
