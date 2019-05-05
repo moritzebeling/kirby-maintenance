@@ -13,7 +13,6 @@ This repo is used as a template for swup plugins. Steps to publish your own swup
 ## Tips
 
 - Checkout existing plugins before creating one.
-- Checkout existing plugins before creating one.
 - Swup instance is automatically assigned to the plugin instance and can be accessed under `this.swup` in `mount`/`unmount` methods.
 - If you feel like this should be an official swup plugin (under npm `@swup` organization) and the world could use a thing like this, contact me at gmarcuk@gmail.com.
 
