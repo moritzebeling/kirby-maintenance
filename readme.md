@@ -1,3 +1,5 @@
+[comment]: CLI-remove-start
+
 # Plugin template
 
 This repo is used as a template for swup plugins. Steps to publish your own swup plugin:
@@ -18,20 +20,22 @@ This repo is used as a template for swup plugins. Steps to publish your own swup
 
 ---
 
-# Swup [plugin name] plugin
+[comment]: CLI-remove-end
+
+# Swup [Plugin Name] plugin
 
 ## Instalation
 
 This plugin can be installed with npm
 
 ```bash
-npm install swup-[plugin name]-plugin
+npm install swup-[plugin-name]-plugin
 ```
 
 and included with import
 
 ```javascript
-import Swup[Name]Plugin from 'swup-[plugin name]-plugin';
+import Swup[PluginName]Plugin from 'swup-[plugin-name]-plugin';
 ```
 
 or included from the dist folder
