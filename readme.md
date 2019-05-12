@@ -22,7 +22,7 @@ This repo is used as a template for swup plugins. Steps to publish your own swup
 
 [comment]: CLI-remove-end
 
-# Swup [Plugin Name] plugin
+# Swup [Plugin Name] Plugin
 
 ## Instalation
 
