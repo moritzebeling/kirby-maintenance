@@ -24,6 +24,8 @@ This repo is used as a template for swup plugins. Steps to publish your own swup
 
 # Swup [Plugin Name] Plugin
 
+This is a plugin for [swup](https://swup.js.org/) - complete, flexible, extensible and easy to use page transition library for your web.
+
 ## Instalation
 
 This plugin can be installed with npm
