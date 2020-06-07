@@ -13,3 +13,4 @@ prettier.config.js
 Thumbs.db
 .DS_Store
 *.DS_Store
+.github
