@@ -42,12 +42,11 @@ Kirby::plugin('moritzebeling/kirby-maintenance', [
                 // user is logged in
                 return;
             }
-            
-            /* @todo
-            - check if there is a page with the slug "maintenance", if yes, display the page
-            - allow toggling of maintenance mode via panel system option
-            - allow pages to be ignored via field
-            */
+
+            // send 503 status code
+
+            $protocol = $_SERVER['SERVER_PROTOCOL'] === 'HTTP/1.1' ? 'HTTP/1.1' : 'HTTP/1.0';
+            header( $protocol . ' 503 Service Unavailable', true, 503 );
 
             echo option('moritzebeling.kirby-maintenance.text');
             exit;
