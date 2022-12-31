@@ -21,7 +21,6 @@ Kirby::plugin('moritzebeling/kirby-maintenance', [
 
             $urls = $kirby->urls()->toArray();
             $ignore = array_merge(option('moritzebeling.kirby-maintenance.ignore', []),[
-                'maintenance',
                 'assets',
                 'api',
                 'media',

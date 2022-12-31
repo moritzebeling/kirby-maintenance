@@ -2,7 +2,7 @@
 
 This plugin uses the `route:before` hook to hide the whole website from logged out visitors when `option('maintenance')` is set to `true`.
 
-All (sub-) routes `maintenance`, `assets`, `api`, `media`, `panel` are will be ignored.
+Kirby urls like `assets`, `api`, `media`, `panel` are will be ignored.
 
 ## Settings
 
@@ -23,6 +23,5 @@ This plugin is work in progress and not tested accross multiple use cases. Use a
 **To do**
 - [ ] check if there is a page with the slug "maintenance", if yes, display that page
 - [ ] allow toggling of maintenance mode via panel system option
-- [ ] allow pages to be ignored via field
-- [ ] make available as composer package
-- [ ] add to plugins repo on getkirby.com
+- [ ] allow pages to be ignored via field or blueprint option
+- [ ] publish as composer package and add to plugins repo on getkirby.com
