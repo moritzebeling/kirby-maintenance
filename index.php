@@ -21,6 +21,7 @@ Kirby::plugin('moritzebeling/kirby-maintenance', [
 
             $urls = $kirby->urls()->toArray();
             $ignore = array_merge(option('moritzebeling.kirby-maintenance.ignore', []),[
+                'maintenance',
                 'assets',
                 'api',
                 'media',
@@ -45,6 +46,7 @@ Kirby::plugin('moritzebeling/kirby-maintenance', [
             
             /* @todo
             - check if there is a page with the slug "maintenance", if yes, display the page
+            - allow toggling of maintenance mode via panel system option
             - allow pages to be ignored via field
             */
 
