@@ -1,12 +1,23 @@
 {
-  "name": "swup-[name]-plugin",
-  "version": "1.0.0",
+  "name": "swup-[plugin-name]-plugin",
+  "amdName": "Swup[PluginName]Plugin",
   "description": "Swup plugin template",
-  "main": "lib/index.js",
+  "version": "2.0.0",
+  "type": "module",
+  "source": "src/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "exports": "./dist/index.modern.js",
+  "unpkg": "./dist/index.umd.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "compile": "babel --presets es2015,stage-0 -d lib/ src/",
-    "build": "webpack-cli",
-    "prepublish": "npm run compile && npm run build"
+    "build": "swup-plugin build",
+    "dev": "swup-plugin dev",
+    "lint": "swup-plugin lint",
+    "format": "swup-plugin format",
+    "prepublish": "npm run build"
   },
   "author": {
     "name": "Georgy Marchuk",
@@ -18,19 +29,14 @@
     "type": "git",
     "url": "https://github.com/swup/plugin-template.git"
   },
-  "devDependencies": {
-    "@swup/prettier-config": "^1.0.0",
-    "@swup/webpack-config": "^0.1.2",
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "lodash": "^4.17.11",
-    "prettier": "1.17.0",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.1"
-  },
   "dependencies": {
-    "@swup/plugin": "^1.0.1"
-  }
+    "@swup/plugin": "^2.0.0"
+  },
+  "devDependencies": {
+    "swup": "^3.0.0"
+  },
+  "peerDependencies": {
+    "swup": "^3.0.0"
+  },
+  "prettier": "@swup/prettier-config"
 }
