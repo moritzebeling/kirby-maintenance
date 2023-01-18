@@ -2,7 +2,7 @@
   "name": "swup-[plugin-name]-plugin",
   "amdName": "Swup[PluginName]Plugin",
   "description": "Swup plugin template",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "type": "module",
   "source": "src/index.js",
   "main": "./dist/index.cjs",
