@@ -1,6 +1,7 @@
 <?php
 
 use Kirby\Cms\App as Kirby;
+use Kirby\Toolkit\F;
 
 class Maintenance {
 
@@ -12,7 +13,10 @@ class Maintenance {
     }
 
     public function isOn(){
-        if( $this->kirby->option('maintenance', false)){
+        if( $this->kirby->option('maintenance', false) ){
+            return true;
+        }
+        if( F::exists($this->kirby->roots()->index() . '/.maintenance') ){
             return true;
         }
         if( $this->kirby->site()->maintenance()->isTrue() ){
@@ -61,16 +65,23 @@ class Maintenance {
     
     public function message(){
         if( $this->kirby->site()->maintenance_text()->isNotEmpty() ){
+
             return $this->kirby->site()->maintenance_text();
-        } else {
-            return option('moritzebeling.kirby-maintenance.text');
+
+        } if( F::exists($this->kirby->roots()->index() . '/.maintenance') 
+            && $content = F::read($this->kirby->roots()->index() . '/.maintenance') ){
+
+            return $content;
+            
         }
+        return option('moritzebeling.kirby-maintenance.text');
     }
     
     public function render( $message ){
         echo '<html><head>';
 
             echo '<title>'. $this->kirby->site()->title() .': 503 service currently unavailable</title>';
+            
             if( $css = $this->kirby->option('moritzebeling.kirby-maintenance.css') ){
                 echo css( $css );
             }

@@ -33,6 +33,12 @@ You can also use one of the prefabricated blueprint parts:
 - `fields/maintenance`
 - `fields/maintenance_text`
 
+## Via file
+
+You could also add a `/.maintenance` file to the Kirby root directory to switch on maintenance mode. This method is used by [bnomei/kirby3-janitor](https://github.com/bnomei/kirby3-janitor) plugin. If you enter any text inside that file, this will be the output when the site is in maintenance mode.
+
+Suggested by https://github.com/moritzebeling/kirby-maintenance/issues/1
+
 ## Add style
 
 With the `moritzebeling.kirby-maintenance.css` option you could add a stylesheet, e.g.:
