@@ -1,0 +1,20 @@
+{
+    "name": "moritzebeling/kirby-maintenance",
+    "description": "Kirby Maintenance mode plugin",
+    "license": "MIT",
+    "type": "kirby-plugin",
+    "version": "1.0.0",
+    "homepage": "https://github.com/moritzebeling/kirby-meintenance",
+    "authors": [
+        {
+            "name": "Moritz Ebeling",
+            "homepage": "https://github.com/moritzebeling"
+        }
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    },
+    "support": {
+        "issues": "https://github.com/moritzebeling/kirby-maintenance/issues"
+    }
+}

@@ -4,6 +4,13 @@ This plugin uses the `route:before` hook to hide the whole website from logged o
 
 Kirby urls like `assets`, `api`, `media`, `panel` are will be ignored.
 
+## Installation
+
+```
+composer require moritzebeling/kirby-maintenance
+composer update moritzebeling/kirby-maintenance
+```
+
 There are different ways to control the maintenance mode:
 
 ## Via option
