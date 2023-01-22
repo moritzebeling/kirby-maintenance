@@ -3,4 +3,4 @@ fields:
 
   maintenance: fields/maintenance
 
-  maintenance_text: fields/maintenance_text
+  maintenance_text: fields/maintenance/text

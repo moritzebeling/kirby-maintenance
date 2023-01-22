@@ -14,6 +14,7 @@ return [
     'maintenance' => true,
     'moritzebeling.kirby-maintenance' => [
         'ignore' => [],
+        'css' => false,
         'text' => 'This website is currently under maintenance and will be back online soon.',
     ]
 ];
@@ -32,10 +33,30 @@ You can also use one of the prefabricated blueprint parts:
 - `fields/maintenance`
 - `fields/maintenance_text`
 
+## Add style
+
+With the `moritzebeling.kirby-maintenance.css` option you could add a stylesheet, e.g.:
+
+```css
+/* /assets/css/meintenance.css */
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.message {
+    max-width: 500px;
+}
+```
+
 ## 🚧 Work in progress
 This plugin is work in progress and not tested accross multiple use cases. Use at own risk. Thank you for any bug reports and pull requests!
 
-**To do**
-- [ ] check if there is a page with the slug `maintenance`, if yes, display that page
-- [ ] allow pages to be ignored via field or blueprint option
-- [ ] publish as composer package and add to plugins repo on getkirby.com
+**Ideas for future development**
+- [ ] Check if there is a page with the slug `maintenance`, if yes, display that page
+- [ ] Allow pages to be ignored via field or blueprint option

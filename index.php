@@ -58,13 +58,30 @@ class Maintenance {
         $protocol = $_SERVER['SERVER_PROTOCOL'] === 'HTTP/1.1' ? 'HTTP/1.1' : 'HTTP/1.0';
         header( $protocol . ' 503 Service Unavailable', true, 503 );
     }
-
+    
     public function message(){
         if( $this->kirby->site()->maintenance_text()->isNotEmpty() ){
-            echo $this->kirby->site()->maintenance_text();
-            return;
+            return $this->kirby->site()->maintenance_text();
+        } else {
+            return option('moritzebeling.kirby-maintenance.text');
         }
-        return option('moritzebeling.kirby-maintenance.text');
+    }
+    
+    public function render( $message ){
+        echo '<html><head>';
+
+            echo '<title>'. $this->kirby->site()->title() .': 503 service currently unavailable</title>';
+            if( $css = $this->kirby->option('moritzebeling.kirby-maintenance.css') ){
+                echo css( $css );
+            }
+    
+        echo '</head><body>';
+
+            echo '<div class="message">';
+                echo $message;
+            echo '</div>';
+
+        echo '</body></html>';
     }
 
 }
@@ -73,12 +90,13 @@ Kirby::plugin('moritzebeling/kirby-maintenance', [
 
     'options' => [
         'ignore' => [],
+        'css' => false,
         'text' => 'This website is currently under maintenance and will be back online soon.'
     ],
 
     'blueprints' => [
         'fields/maintenance' => __DIR__ . '/blueprints/field.yml',
-        'fields/maintenance_text' => __DIR__ . '/blueprints/text.yml',
+        'fields/maintenance/text' => __DIR__ . '/blueprints/text.yml',
         'sections/maintenance' => __DIR__ . '/blueprints/section.yml',
         'tabs/maintenance' => __DIR__ . '/blueprints/tab.yml',
     ],
@@ -101,7 +119,9 @@ Kirby::plugin('moritzebeling/kirby-maintenance', [
             }
 
             $maintenance->setHeaders();
-            $maintenance->message();
+            echo $maintenance->render(
+                $maintenance->message()
+            );
             
             exit;
         }
