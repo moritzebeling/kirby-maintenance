@@ -1,0 +1,6 @@
+type: fields
+fields:
+
+  maintenance: fields/maintenance
+
+  maintenance_text: fields/maintenance_text

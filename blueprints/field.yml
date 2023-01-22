@@ -1,0 +1,15 @@
+label:
+  en: Maintenance mode
+  de: Wartungsmodus
+type: toggle
+icon: moon
+help:
+  en: Switch website off completely for logged out users
+  de: Website für ausgeloggte User komplett abschalten
+text:
+  -
+    en: Website visible
+    de: Website sichtbar
+  -
+    en: Website hidden
+    de: Website versteckt
