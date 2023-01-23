@@ -68,7 +68,7 @@ body {
 ```
 
 ## 🚧 Work in progress
-This plugin is work in progress and not tested accross multiple use cases. Use at own risk. Thank you for any bug reports and pull requests!
+This plugin comes without any warranty and was not widely tested. Use it at your own risk. If you encounter any problems or have ideas for future development, please submit an issue or pull request.
 
 **Ideas for future development**
 - [ ] Check if there is a page with the slug `maintenance`, if yes, display that page
