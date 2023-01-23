@@ -51,7 +51,7 @@ Suggested by https://github.com/moritzebeling/kirby-maintenance/issues/1
 With the `moritzebeling.kirby-maintenance.css` option you could add a stylesheet, e.g.:
 
 ```css
-/* /assets/css/meintenance.css */
+/* /assets/css/maintenance.css */
 body {
     width: 100%;
     height: 100%;
