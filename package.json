@@ -38,5 +38,8 @@
   "peerDependencies": {
     "swup": "^3.0.0"
   },
+  "browserslist": [
+    "extends @swup/browserslist-config"
+  ],
   "prettier": "@swup/prettier-config"
 }
