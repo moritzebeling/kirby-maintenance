@@ -1,6 +1,6 @@
 {
-  "name": "swup-[plugin-name]-plugin",
   "amdName": "Swup[PluginName]Plugin",
+  "name": "swup-[name]-plugin",
   "description": "Swup plugin template",
   "version": "1.0.0",
   "type": "module",
