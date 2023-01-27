@@ -7,14 +7,14 @@ export default class PluginName extends Plugin {
 		super();
 		/**
 		 * Exectuted each time an instance of this plugin is created.
-		 * Can be used for things that don't rely on access to the swup instance
+		 * Can be used for things that don't rely on access to the swup instance.
 		 */
 	}
 
 	mount() {
 		/**
-		 * Executed when swup is initialized with this plugin
-		 * You can use this.swup here to access the swup instance
+		 * Executed when swup is initialized with this plugin.
+		 * You can use this.swup here to access the swup instance.
 		 *
 		 * example: this.swup.on('clickLink', this.handleLinkClick)
 		 */
