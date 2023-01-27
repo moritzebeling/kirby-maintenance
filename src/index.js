@@ -5,19 +5,29 @@ export default class PluginName extends Plugin {
 
 	constructor() {
 		super();
-		// this gets run when instance is created
-		// and can be used for things that don't need
-		// to wait for swup instance
+		/**
+		 * Exectuted each time an instance of this plugin is created.
+		 * Can be used for things that don't rely on access to the swup instance.
+		 */
 	}
 
 	mount() {
-		// this is executed when swup is enabled with plugin
-		// you can use this.swup here to access swup instance
-		// example: this.swup.on('clickLink', event => console.log(event))
+		/**
+		 * Executed when swup is initialized with this plugin.
+		 * You can use this.swup here to access the swup instance.
+		 *
+		 * example: this.swup.on('clickLink', this.handleLinkClick)
+		 */
 	}
 
 	unmount() {
-		// this is executed when swup with plugin is disabled
-		// you can use this.swup here to access swup instance
+		/**
+		 * Executed when a swup instance with this plugin is disabled.
+		 * You can use this.swup here to access the swup instance.
+		 * Make sure to undo any changes your plugin might have applied to the
+		 * swup instance and remove event listeners here.
+		 *
+		 * example: this.swup.off('clickLink', this.handleLinkClick)
+		 */
 	}
 }

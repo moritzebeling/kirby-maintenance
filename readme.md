@@ -1,22 +1,25 @@
 [comment]: CLI-remove-start
 
-# Plugin template
+# Swup Plugin Template
 
-This repo is used as a template for swup plugins. Steps to publish your own swup plugin:
+This repo is a template for creating custom swup plugins.
 
-1. Make a copy of this repo.
-2. Update the name in _package.json_. Please, follow format `swup-[plugin name]-plugin`.
-3. Update the description, repository url and author in _package.json_.
-4. Write your plugin in `src/index.js`. Plugin must be in a form of class, must extend `@swup/plugin` and should have a property name defined (`package.json` name in a form PascalCase - _swup-name-plugin_ -> _SwupNamePlugin_).
-5. Update this documentation. Below is a documentation template where the _SwupNamePlugin_ needs to be replaced with your plugin name from packages.json in PascalCase.
-6. Use `npm run build` to compile a standalone version of your plugin (_dist_ folder) and `npm run compile` to transpile npm version of your plugin (_lib_ folder). Both commands are run before publishing automatically.
-7. Publish your plugin to npm with `npm publish` command. This assumes you have npm account and are logged in with your computers npm CLI.
+## Instructions
+
+1. Clone this repository.
+2. Update the package name in `package.json`. Make sure to follow the format `swup-[plugin name]-plugin`.
+3. Update the description, repository url and author in `package.json`.
+4. Add functionality to your plugin in `src/index.js`. It must be a class extending `@swup/plugin`. Make sure to update the class name as well as the `name` property in PascalCase:
+`swup-name-plugin` → `SwupNamePlugin`
+5. Update this readme and document the features of your plugin. Make sure to replace each `SwupNamePlugin` placeholder with the actual name of your plugin in PascalCase.
+6. Run `npm run build` to build a transpiled dist version of the plugin. The build command is run before publishing to npm automatically.
+7. Publish your plugin to npm using `npm publish`. This assumes you have an npm account and are logged in via their CLI.
 
 ## Tips
 
-- Checkout existing plugins before creating one.
-- Swup instance is automatically assigned to the plugin instance and can be accessed under `this.swup` in `mount`/`unmount` methods.
-- If you feel like this should be an official swup plugin (under npm `@swup` organization) and the world could use a thing like this, contact me at gmarcuk@gmail.com.
+- Check out existing plugins before creating a new one.
+- The swup instance is automatically assigned to the plugin instance and can be accessed at `this.swup` in the `mount`/`unmount` methods.
+- If you think your new plugin has broad appeal and should live in the `@swup` org as an official plugin, get in touch at gmarcuk@gmail.com.
 
 ---
 
@@ -24,26 +27,26 @@ This repo is used as a template for swup plugins. Steps to publish your own swup
 
 # Swup [Plugin Name] Plugin
 
-This is a plugin for [swup](https://swup.js.org/) - complete, flexible, extensible and easy to use page transition library for your web.
+This is a plugin for [swup](https://swup.js.org/) – the complete, flexible, extensible, and easy-to-use page transition library for your server-side rendered website.
 
-## Instalation
+[Describe the functionality of this plugin]
 
-This plugin can be installed with npm
+## Installation
+
+Install the plugin from npm and import it into your bundle.
 
 ```bash
 npm install swup-[plugin-name]-plugin
 ```
 
-and included with import
-
-```javascript
+```js
 import Swup[PluginName]Plugin from 'swup-[plugin-name]-plugin';
 ```
 
-or included from the dist folder
+Or include the minified production file from a CDN:
 
 ```html
-<script src="./dist/SwupNamePlugin.js"></script>
+<script src="https://unpkg.com/swup-[plugin-name]-plugin@latest"></script>
 ```
 
 ## Usage
@@ -52,6 +55,6 @@ To run this plugin, include an instance in the swup options.
 
 ```javascript
 const swup = new Swup({
-  plugins: [new SwupNamePlugin()]
+  plugins: [new Swup[PluginName]Plugin()]
 });
 ```
