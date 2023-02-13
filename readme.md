@@ -1,8 +1,4 @@
-[comment]: CLI-remove-start
-
 # Swup Plugin Template
-
-This repo is a template for creating custom swup plugins.
 
 ## Instructions
 
@@ -23,30 +19,28 @@ This repo is a template for creating custom swup plugins.
 
 ---
 
-[comment]: CLI-remove-end
-
-# Swup [Plugin Name] Plugin
+# SwupHighlightCurrentPagePlugin
 
 This is a plugin for [swup](https://swup.js.org/) – the complete, flexible, extensible, and easy-to-use page transition library for your server-side rendered website.
 
-[Describe the functionality of this plugin]
+Swup plugin for highlighting links to the current page.
 
 ## Installation
 
 Install the plugin from npm and import it into your bundle.
 
 ```bash
-npm install swup-[plugin-name]-plugin
+npm install swup-highlight-current-page-plugin
 ```
 
 ```js
-import Swup[PluginName]Plugin from 'swup-[plugin-name]-plugin';
+import SwupHighlightCurrentPagePlugin from 'swup-highlight-current-page-plugin';
 ```
 
 Or include the minified production file from a CDN:
 
 ```html
-<script src="https://unpkg.com/swup-[plugin-name]-plugin@latest"></script>
+<script src="https://unpkg.com/swup-highlight-current-page-plugin@latest"></script>
 ```
 
 ## Usage
@@ -55,6 +49,6 @@ To run this plugin, include an instance in the swup options.
 
 ```javascript
 const swup = new Swup({
-  plugins: [new Swup[PluginName]Plugin()]
+  plugins: [new SwupHighlightCurrentPagePlugin()]
 });
 ```

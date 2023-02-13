@@ -1,7 +1,7 @@
 {
-  "amdName": "Swup[PluginName]Plugin",
-  "name": "swup-[name]-plugin",
-  "description": "Swup plugin template",
+  "amdName": "SwupHighlightCurrentPagePlugin",
+  "name": "swup-highlight-current-page-plugin",
+  "description": "Swup plugin for highlighting links to the current page",
   "version": "1.0.0",
   "type": "module",
   "source": "src/index.js",
@@ -20,14 +20,13 @@
     "prepublish": "npm run build"
   },
   "author": {
-    "name": "Georgy Marchuk",
-    "email": "gmarcuk@gmail.com",
-    "url": "https://gmrchk.com/"
+    "name": "Moritz Ebeling",
+    "url": "https://moritzebeling.com/"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/swup/plugin-template.git"
+    "url": "https://github.com/swup/swup-highlight-current-page-plugin.git"
   },
   "dependencies": {
     "@swup/plugin": "^2.0.0"
