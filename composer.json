@@ -1,20 +1,40 @@
 {
     "name": "moritzebeling/kirby-maintenance",
     "description": "Kirby Maintenance mode plugin",
-    "license": "MIT",
-    "type": "kirby-plugin",
     "version": "1.0.0",
+    "type": "kirby-plugin",
     "homepage": "https://github.com/moritzebeling/kirby-maintenance",
+    "time": "2023-01-22",
+    "license": "MIT",
     "authors": [
         {
             "name": "Moritz Ebeling",
-            "homepage": "https://github.com/moritzebeling"
+            "homepage": "https://moritzebeling.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/moritzebeling/kirby-maintenance/issues",
+        "source": "https://github.com/moritzebeling/kirby-maintenance",
+        "docs": "https://github.com/moritzebeling/kirby-maintenance"
+    },
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://www.paypal.com/paypalme/cryptomunich"
         }
     ],
     "require": {
+        "php": ">=7.4.0",
         "getkirby/composer-installer": "^1.1"
     },
-    "support": {
-        "issues": "https://github.com/moritzebeling/kirby-maintenance/issues"
-    }
+    "keywords": [
+        "php",
+        "kirby",
+        "plugin",
+        "kirby-plugin",
+        "kirby-cms",
+        "maintenance",
+        "wip",
+        "staging"
+    ]
 }

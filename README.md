@@ -1,15 +1,17 @@
 # Kirby Maintenance Mode Plugin
 
-This plugin uses the `route:before` hook to hide the whole website from logged out visitors when `option('maintenance')` is set to `true`. It also sends a `503` code.
+This plugin uses the `route:before` hook to hide the whole website from not-logged-in users when `option('maintenance')` is set to `true`. It also sends a `503` code.
 
-Kirby urls like `assets`, `api`, `media`, `panel` are will be ignored.
+Kirby urls like `assets`, `api`, `media`, `panel` will be ignored and are still available.
 
 ## Installation
 
-```
+```bash
 composer require moritzebeling/kirby-maintenance
 composer update moritzebeling/kirby-maintenance
 ```
+
+Or download/clone this repo into `site/plugins` of your Kirby project.
 
 There are different ways to control the maintenance mode:
 
@@ -18,7 +20,10 @@ There are different ways to control the maintenance mode:
 ```php
 // site/config.php
 return [
+    // one line switch
     'maintenance' => true,
+
+    // more detailed configuration
     'moritzebeling.kirby-maintenance' => [
         'ignore' => [],
         'css' => false,
@@ -67,9 +72,23 @@ body {
 }
 ```
 
-## 🚧 Work in progress
-This plugin comes without any warranty and was not widely tested. Use it at your own risk. If you encounter any problems or have ideas for future development, please submit an issue or pull request.
+## 🚧 Development
 
-**Ideas for future development**
+1. Install yourself a fresh Kirby StarterKit
+2. `cd site/plugins`
+3. `git clone` this repo
+
+Roadmap
 - [ ] Check if there is a page with the slug `maintenance`, if yes, display that page
 - [ ] Allow pages to be ignored via field or blueprint option
+- [ ] Multilang support
+
+## ☕️ Support
+
+If you like this plugin, I would be glad if you would invite me for a coffee: [PayPal](https://www.paypal.com/paypalme/cryptomunich)
+
+If you have any ideas for further development or stumble upon any problems, please open an issue or PR. Thank you!
+
+## Warranty
+
+This plugin is work in progress and comes without any warranty. Use at your own risk.
