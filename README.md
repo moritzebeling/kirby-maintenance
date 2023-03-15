@@ -72,9 +72,9 @@ body {
 }
 ```
 
-## 🚧 Development
+## Development
 
-1. Install yourself a fresh Kirby StarterKit
+1. Install a fresh Kirby StarterKit
 2. `cd site/plugins`
 3. `git clone` this repo
 
@@ -85,8 +85,7 @@ Roadmap
 
 ## ☕️ Support
 
-If you like this plugin, I would be glad if you would invite me for a coffee: [PayPal](https://www.paypal.com/paypalme/cryptomunich)
-
+If you like this plugin, I would be glad if you would invite me on a coffee via [PayPal](https://www.paypal.com/paypalme/cryptomunich)
 If you have any ideas for further development or stumble upon any problems, please open an issue or PR. Thank you!
 
 ## Warranty
